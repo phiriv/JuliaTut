@@ -1,3 +1,5 @@
 function hello()
-    return "Goodbye, Mars!"
+    return "Hello Planetoid Earth!"
 end
+
+hello()
