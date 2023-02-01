@@ -24,4 +24,13 @@ function count_nucleotides(strand)
     end
 end
 
+function count_nucleotides2(strand)
+    #use a dictionary for efficiency
+    counts=Dict((base => count(==(base), strand) ) for base in "ACGT")
+    if sum(values(counts)) != length(strand)
+        throw(DomainError(strand, "INVALID NUCLEOTIDE SEQUENCE"))
+    end
+    
+    return counts
+end
 #count_nucleotides("AAGCTT")
