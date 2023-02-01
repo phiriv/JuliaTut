@@ -13,13 +13,15 @@ function count_nucleotides(strand)
     ts=count(==('T'),strand)    #THYMINE
     gs=count(==('G'),strand)    #GUANINE
 
-    if(as==0 && cs==0 && ts==0 && gs==0)
+    if (strand=="")
+        print("YOU ARE A ZERO")
+    elseif(as==0 && cs==0 && ts==0 && gs==0)
         print("CATASTROPHIC ERROR")
-        return 0
+        
     else
-        print("A: ", as,", C:",cs,", T: ",ts,", G: ",gs)
-        return 0
+        print("A: ", as,", C :",cs,", T: ",ts,", G: ",gs)
+        
     end
 end
 
-count_nucleotides("AAGCTT")
+#count_nucleotides("AAGCTT")
